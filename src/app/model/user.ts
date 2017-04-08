@@ -13,6 +13,7 @@ export class User{
             this.authState = authState;
             this.userId = authState.uid;
             this.email = authState.auth.providerData[0].email;
+            this.displayName = (authState.auth.providerData[0].displayName ? authState.auth.providerData[0].displayName : this.email);
         }
     }
 }
